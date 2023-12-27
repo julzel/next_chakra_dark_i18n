@@ -1,27 +1,12 @@
 'use client'
-
-import { useEffect, useState } from 'react'
-import { useTheme } from 'next-themes'
+import { useColorMode, Switch } from '@chakra-ui/react';
 
 const DarkModeSwitch = () => {
-  const { resolvedTheme, setTheme } = useTheme()
-
-  const [mounted, setMounted] = useState(false)
-  useEffect(() => setMounted(true), [])
-
-  if (!mounted) {
-    return null
-  }
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
-    <button
-      aria-label='Toggle Dark Mode'
-      type='button'
-      onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-    >
-      {resolvedTheme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode'}
-    </button>
-  )
-}
+    <Switch isChecked={colorMode === 'dark'} onChange={toggleColorMode} />
+  );
+};
 
 export default DarkModeSwitch;
