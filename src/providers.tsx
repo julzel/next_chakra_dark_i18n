@@ -1,12 +1,19 @@
+'use client';
 import { ReactNode, FC } from 'react';
-import UIContext from '@/contexts/UIContext';
+import { ColorModeScript, ChakraProvider } from '@chakra-ui/react';
+import theme from '@/theme';
 
 type ProvidersProps = {
   children: ReactNode;
 };
 
 const Providers: FC<ProvidersProps> = ({ children }) => {
-  return <UIContext>{children}</UIContext>;
+  return (
+    <>
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+      <ChakraProvider theme={theme}>{children}</ChakraProvider>
+    </>
+  );
 };
 
 export default Providers;

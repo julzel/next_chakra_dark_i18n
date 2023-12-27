@@ -5,6 +5,10 @@
   --dark-theme-bg: #29434e;
 }
 
+/* body {
+  background-color: transparent !important;
+} */
+
 .light {
   color: var(--light-theme-text);
   background-color: var(--light-theme-bg);

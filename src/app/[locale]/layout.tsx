@@ -1,7 +1,6 @@
 import React, { ReactNode } from 'react';
 import Providers from '@/providers';
-import LocaleSwitcher from '@/components/LocaleSwitcher';
-import DarkModeSwitch from '@/components/DarkModeSwitch';
+import Header from '@/components/Header';
 import '../globals.css';
 
 interface LocaleLayoutProps {
@@ -19,11 +18,10 @@ export default function LocaleLayout({
     <html lang={locale}>
       <body>
         <Providers>
-          <header>
-            <LocaleSwitcher />
-            <DarkModeSwitch />
-          </header>
-          {children}
+          <Header />
+          <main>
+            {children}
+          </main>
         </Providers>
       </body>
     </html>
