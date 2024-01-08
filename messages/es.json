@@ -5,5 +5,11 @@
     "LocaleSwitcher": {
         "label": "Cambiar idioma",
         "locale": "{locale, select, es {Español} en {Inglés} other {desconocido}}"
+    },
+    "Header": {
+        "blog": "Blog",
+        "home": "Inicio",
+        "faq": "Preguntas frecuentes",
+        "store": "Tienda"
     }
 }

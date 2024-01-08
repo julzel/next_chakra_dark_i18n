@@ -5,5 +5,11 @@
     "LocaleSwitcher": {
         "label": "Change language",
         "locale": "{locale, select, es {Spanish} en {English} other {Unknown}}"
+    },
+    "Header": {
+        "blog": "Blog",
+        "home": "Home",
+        "faq": "FAQ",
+        "store": "Store"
     }
 }
